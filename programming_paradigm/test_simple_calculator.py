@@ -7,14 +7,14 @@ class TestSimpleCalculator(unittest.TestCase):
         """Set up a new SimpleCalculator instance for each test."""
         self.calc = SimpleCalculator()
 
-    def test_addition(self):  # ✅ Match expected method name
+    def test_addition(self):
         """Test addition of two numbers."""
         self.assertEqual(self.calc.add(2, 3), 5)
         self.assertEqual(self.calc.add(-1, 1), 0)
         self.assertEqual(self.calc.add(-5, -7), -12)
         self.assertEqual(self.calc.add(0, 0), 0)
 
-    def test_subtract(self):
+    def test_subtraction(self):  # ✅ Renamed to match expected name
         """Test subtraction of two numbers."""
         self.assertEqual(self.calc.subtract(10, 5), 5)
         self.assertEqual(self.calc.subtract(0, 5), -5)
